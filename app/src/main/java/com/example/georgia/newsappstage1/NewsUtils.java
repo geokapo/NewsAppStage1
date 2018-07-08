@@ -29,9 +29,9 @@ public class NewsUtils {
 
     private static final String results = "results";
 
-    private static final String section = "CategoryName";
+    private static final String section = "SectionName";
 
-    private static final String date = "webPublicationDate";
+    private static final String date = "date";
 
     private static final String title = "webTitle";
 
@@ -226,7 +226,7 @@ public class NewsUtils {
                 }
 
                 // Extract the article name for the key called "webTitle"
-                String newsTitle = currentNews.getString(title);
+                String newsTitle = currentNews.getString ( title );
 
                 // Extract the value for the key called "webUrl"
                 String newsUrl = currentNews.getString(url);
@@ -237,10 +237,10 @@ public class NewsUtils {
                 String newsAuthor = "N/A";
 
                 //Check if "tags" array contains data
-                int tagsLenght = currentNewsAuthorArray.length();
+                int tagsLength = currentNewsAuthorArray.length();
 
 
-                if (tagsLenght == 1) {
+                if (tagsLength == 1) {
                     // Create a JSONObject for author
                     JSONObject currentNewsAuthor = currentNewsAuthorArray.getJSONObject(0);
 
@@ -250,7 +250,7 @@ public class NewsUtils {
 
                 }
 
-                // Create a new News object with the title, category, author, date, url ,
+                // Create a new News object with the title, section, author, date, url ,
                 // from the JSON response.
                 News newNews = new News(newsTitle, newsSection, newsAuthor, newsDate, newsUrl);
 
@@ -265,7 +265,7 @@ public class NewsUtils {
             Log.e("NewsUtils", "JSON results parsing problem.");
         }
 
-        // Return the list of earthquakes
+        // Return the list of news
         return newsList;
     }
 }

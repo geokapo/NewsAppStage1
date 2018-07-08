@@ -41,7 +41,7 @@ public class NewsAdapter extends ArrayAdapter<News> {
         //Find the TextView with category
         TextView categoryTextView = listItemView.findViewById(R.id.newsCategory);
         //Display the category of the current article in that TextView
-        categoryTextView.setText(currentNews.getmCategory());
+        categoryTextView.setText(currentNews.getmSection());
 
 
         //Find the TextView with author name

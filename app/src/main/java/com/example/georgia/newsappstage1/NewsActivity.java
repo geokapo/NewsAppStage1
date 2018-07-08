@@ -24,7 +24,7 @@ public class NewsActivity extends AppCompatActivity implements LoaderManager.Loa
         private static final String GUARDIAN_REQUEST_URL;
 
     static {
-        GUARDIAN_REQUEST_URL = "https://content.guardianapis.com/search?";
+        GUARDIAN_REQUEST_URL = "https://content.guardianapis.com/search?q=sports%20and%20news%20and%20politics%20in%20greece&show-tags=contributor&api-key=48204420-2fdb-45dd-b9bf-0baee3ebbf2b";
     }
 
     /**
