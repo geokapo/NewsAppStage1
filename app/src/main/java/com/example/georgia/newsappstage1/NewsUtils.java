@@ -29,9 +29,9 @@ public class NewsUtils {
 
     private static final String results = "results";
 
-    private static final String section = "SectionName";
+    private static final String section = "sectionName";
 
-    private static final String date = "date";
+    private static final String date = "webPublicationDate";
 
     private static final String title = "webTitle";
 
@@ -240,7 +240,7 @@ public class NewsUtils {
                 int tagsLength = currentNewsAuthorArray.length();
 
 
-                if (tagsLength == 1) {
+                if (tagsLength > 0) {
                     // Create a JSONObject for author
                     JSONObject currentNewsAuthor = currentNewsAuthorArray.getJSONObject(0);
 
@@ -252,7 +252,7 @@ public class NewsUtils {
 
                 // Create a new News object with the title, section, author, date, url ,
                 // from the JSON response.
-                News newNews = new News(newsTitle, newsSection, newsAuthor, newsDate, newsUrl);
+                News newNews = new News(newsTitle, newsSection, newsDate, newsAuthor, newsUrl);
 
                 // Add the new {@link News} to the list of News.
                 newsList.add(newNews);

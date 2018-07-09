@@ -3,7 +3,7 @@ package com.example.georgia.newsappstage1;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class News extends AppCompatActivity  {
+public class News   {
 
 //New title
     private String mTitle;
