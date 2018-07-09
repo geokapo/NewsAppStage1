@@ -62,7 +62,7 @@ public class NewsAdapter extends ArrayAdapter<News> {
         //Find the TextView with the date
         TextView dateTextView = listItemView.findViewById(R.id.newsDate);
         //Display the date of the current article in that TextView
-        dateTextView.setText(currentNews.getmDate());
+        dateTextView.setText(formattedDate);
 
 
 
