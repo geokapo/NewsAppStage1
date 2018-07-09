@@ -24,6 +24,7 @@ public class NewsAdapter extends ArrayAdapter<News> {
 
 
 
+    @SuppressWarnings("unused")
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // Check if there is an existing list item view (called convertView) that we can reuse,
@@ -64,7 +65,8 @@ public class NewsAdapter extends ArrayAdapter<News> {
         dateTextView.setText(currentNews.getmDate());
 
 
-        // Define a SimpleDateFormat object to deconstruct original date.
+
+// Define a SimpleDateFormat object to deconstruct original date.
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'kk:mm:ss'Z'");
         Date date = null;
 
@@ -79,9 +81,6 @@ public class NewsAdapter extends ArrayAdapter<News> {
         SimpleDateFormat newDateFormat = new SimpleDateFormat("LLL dd, yyyy");
         // Convert the Date object into a String.
         String formattedDate = newDateFormat.format(date);
-
-
-
 
 
         return listItemView;

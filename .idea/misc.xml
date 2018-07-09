@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="EntryPointsManager">
+    <entry_points version="2.0">
+      <entry_point TYPE="field" FQNAME="com.example.georgia.newsappstage1.NewsActivity LOG_TAG" />
+      <entry_point TYPE="field" FQNAME="com.example.georgia.newsappstage1.NewsLoader LOG_TAG" />
+    </entry_points>
+    <pattern value="com.example.georgia.newsappstage1.ExampleInstrumentedTest" method="useAppContext" />
+    <pattern value="com.example.georgia.newsappstage1.ExampleInstrumentedTest" />
+    <pattern value="com.example.georgia.newsappstage1.ExampleUnitTest" method="addition_isCorrect" />
+    <pattern value="com.example.georgia.newsappstage1.ExampleUnitTest" />
+    <pattern value="com.example.georgia.newsappstage1.NewsActivity" />
+    <pattern value="com.example.georgia.newsappstage1.NewsAdapter" method="getView" />
+    <pattern value="com.example.georgia.newsappstage1.NewsAdapter" />
+    <pattern value="com.example.georgia.newsappstage1.NewsLoader" />
+  </component>
   <component name="NullableNotNullManager">
     <option name="myDefaultNullable" value="android.support.annotation.Nullable" />
     <option name="myDefaultNotNull" value="android.support.annotation.NonNull" />

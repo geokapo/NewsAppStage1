@@ -234,7 +234,7 @@ public class NewsUtils {
                 //Extract the JSONArray associated with the key called "tags",
                 JSONArray currentNewsAuthorArray = currentNews.getJSONArray(tags);
 
-                String newsAuthor = "N/A";
+                String newsAuthor = "Written by: N/A";
 
                 //Check if "tags" array contains data
                 int tagsLength = currentNewsAuthorArray.length();

@@ -14,6 +14,7 @@
         android:textColor="@color/colorPrimaryDark"
         android:textSize="@dimen/text20"
         android:textStyle="bold"
+        android:paddingLeft="@dimen/dim8"
         tools:text="@string/news_title" />
 
     <TextView
@@ -24,6 +25,7 @@
         android:paddingTop="@dimen/dim8"
         android:textColor="@color/colorPrimeText"
         android:textSize="@dimen/text16"
+        android:paddingLeft="@dimen/dim8"
         tools:text="@string/news_category" />
 
 
@@ -37,6 +39,7 @@
         android:paddingTop="@dimen/dim8"
         android:textColor="@color/colorSecondText"
         android:textSize="@dimen/text12"
+        android:paddingLeft="@dimen/dim8"
         tools:text="@string/author" />
 
     <TextView
@@ -49,6 +52,7 @@
         android:paddingTop="@dimen/dim8"
         android:textColor="@color/colorSecondText"
         android:textSize="@dimen/text12"
+        android:paddingRight="@dimen/dim8"
         tools:text="@string/date" />
 
 
