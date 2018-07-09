@@ -59,13 +59,6 @@ public class NewsAdapter extends ArrayAdapter<News> {
 
 
 
-        //Find the TextView with the date
-        TextView dateTextView = listItemView.findViewById(R.id.newsDate);
-        //Display the date of the current article in that TextView
-        dateTextView.setText(formattedDate);
-
-
-
 // Define a SimpleDateFormat object to deconstruct original date.
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'kk:mm:ss'Z'");
         Date date = null;
@@ -81,6 +74,12 @@ public class NewsAdapter extends ArrayAdapter<News> {
         SimpleDateFormat newDateFormat = new SimpleDateFormat("LLL dd, yyyy");
         // Convert the Date object into a String.
         String formattedDate = newDateFormat.format(date);
+
+
+        //Find the TextView with the date
+        TextView dateTextView = listItemView.findViewById(R.id.newsDate);
+        //Display the date of the current article in that TextView
+        dateTextView.setText(formattedDate);
 
 
         return listItemView;
