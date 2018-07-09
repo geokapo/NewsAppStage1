@@ -6,7 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 
 public class NewsAdapter extends ArrayAdapter<News> {
@@ -14,7 +18,10 @@ public class NewsAdapter extends ArrayAdapter<News> {
     public NewsAdapter(Context context, ArrayList<News> news) {
         super(context, 0, news);
 
+
+
     }
+
 
 
     @Override
@@ -56,6 +63,22 @@ public class NewsAdapter extends ArrayAdapter<News> {
         //Display the date of the current article in that TextView
         dateTextView.setText(currentNews.getmDate());
 
+
+        // Define a SimpleDateFormat object to deconstruct original date.
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'kk:mm:ss'Z'");
+        Date date = null;
+
+        try {
+            // Convert the date String into a Date object using the SimpleDateFormat.
+            date = simpleDateFormat.parse(currentNews.getmDate());
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        // Define a new SimpleDateFormat object to reconstruct the date into the desired format.
+        SimpleDateFormat newDateFormat = new SimpleDateFormat("LLL dd, yyyy");
+        // Convert the Date object into a String.
+        String formattedDate = newDateFormat.format(date);
 
 
 
